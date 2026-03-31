@@ -1,16 +1,16 @@
 {
-  "name": "lyssna",
+  "name": "lynda",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rolanbacalla-glitch/lyssna.git"
+    "url": "git+https://github.com/rolanbacalla-glitch/lynda.git"
   },
   "bugs": {
-    "url": "https://github.com/rolanbacalla-glitch/lyssna/issues"
+    "url": "https://github.com/rolanbacalla-glitch/lynda/issues"
   },
-  "homepage": "https://lyssna-seven.vercel.app/",
+  "homepage": "https://lynda-seven.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

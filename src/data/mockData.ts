@@ -66,7 +66,7 @@ export const mockParticipants: Participant[] = [
 ];
 
 export const mockTeamMembers: TeamMember[] = [
-  { id: 't1', name: 'Bagas Mahpie', role: 'Lead Researcher', email: 'bagas@lyssna.co', status: 'online', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
-  { id: 't2', name: 'Sir Dandy', role: 'UX Analyst', email: 'dandy@lyssna.co', status: 'offline', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150' },
-  { id: 't3', name: 'Jhon Tosan', role: 'Product Mgr', email: 'jhon@lyssna.co', status: 'editing', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150' },
+  { id: 't1', name: 'Bagas Mahpie', role: 'Lead Researcher', email: 'bagas@lynda.co', status: 'online', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
+  { id: 't2', name: 'Sir Dandy', role: 'UX Analyst', email: 'dandy@lynda.co', status: 'offline', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150' },
+  { id: 't3', name: 'Jhon Tosan', role: 'Product Mgr', email: 'jhon@lynda.co', status: 'editing', avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=150' },
 ];

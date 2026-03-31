@@ -10,12 +10,12 @@ const Hero: React.FC = () => {
           Now featuring Agentic AI Analysis
         </div>
         
-        <h1 className="text-6xl md:text-8xl mb-8 max-w-[1000px] mx-auto font-display font-bold leading-[1.05] text-slate-900 tracking-tight">
-          Meet Your New <span className="text-gradient">Agentic Research</span> Collaborator
+        <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-8 tracking-tighter leading-[0.9]">
+          Lynda <span className="text-gradient">Plus</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-slate-500 max-w-[800px] mx-auto mb-14 leading-relaxed font-medium">
-          Stop using passive tools. Lyssna-Plus uses Agentic AI to actively guide your research, detect subtle bias, and automate complex synthesis in real-time.
+          Stop using passive tools. Lynda-Plus uses Agentic AI to actively guide your research, detect subtle bias, and automate complex synthesis in real-time.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-0">
