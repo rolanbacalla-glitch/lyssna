@@ -55,12 +55,11 @@ const AgenticReasoning: React.FC = () => {
               {i !== reasoningSteps.length - 1 && (
                 <div className="absolute left-4 top-10 bottom-[-20px] w-0.5 bg-slate-800" />
               )}
-              
-              <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all duration-500 ${
-                step.status === 'complete' ? 'bg-brand-600 border-brand-600' : 
-                step.status === 'active' ? 'bg-slate-900 border-brand-500 animate-pulse' : 
-                'bg-slate-900 border-slate-700'
-              }`}>
+
+              <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all duration-500 ${step.status === 'complete' ? 'bg-brand-600 border-brand-600' :
+                  step.status === 'active' ? 'bg-slate-900 border-brand-500 animate-pulse' :
+                    'bg-slate-900 border-slate-700'
+                }`}>
                 {step.status === 'complete' ? '✓' : step.step}
               </div>
 
@@ -85,10 +84,10 @@ const AgenticReasoning: React.FC = () => {
 
         <div className="mt-14 p-6 rounded-[24px] bg-white/5 border border-white/10 flex items-center justify-between">
           <div className="flex items-center gap-4">
-             <div className="w-10 h-10 rounded-xl bg-brand-500/20 border border-brand-500/20 flex items-center justify-center">
-                <span className="material-symbols-rounded text-brand-400">auto_awesome</span>
-             </div>
-             <p className="text-sm font-bold text-slate-300">Proceed with auto-generated Project Task?</p>
+            <div className="w-10 h-10 rounded-xl bg-brand-500/20 border border-brand-500/20 flex items-center justify-center">
+              <span className="material-symbols-rounded text-brand-400">auto_awesome</span>
+            </div>
+            <p className="text-sm font-bold text-slate-600">Proceed with auto-generated Project Task?</p>
           </div>
           <button className="bg-white text-slate-950 px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-brand-500 hover:text-white transition-all">
             Accept & Scale

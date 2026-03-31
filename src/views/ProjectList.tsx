@@ -125,13 +125,15 @@ const ProjectList: React.FC = () => {
                     <td className="table-cell">
                       <span className={`text-[11px] font-bold ${p.status === 'Live' ? 'text-emerald-600' : 'text-slate-600'}`}>{p.status}</span>
                     </td>
-                    <td className="table-cell text-right flex items-center justify-end gap-3 pt-6">
-                      <Link to={`/dashboard/projects/${p.id}/session`} className="text-[10px] font-black text-brand-600 px-4 py-2 rounded-xl bg-brand-50 hover:bg-brand-600 hover:text-white transition-all uppercase tracking-widest no-underline shadow-sm">
-                        Live Session
-                      </Link>
-                      <Link to={`/dashboard/projects/${p.id}/insights`} className="p-2 rounded-xl border border-slate-100 text-slate-600 hover:text-brand-600 hover:border-brand-100 transition-all shadow-sm">
-                        <span className="material-symbols-rounded text-sm">analytics</span>
-                      </Link>
+                    <td className="table-cell text-right pt-6">
+                      <div className="flex items-center justify-end gap-3">
+                        <Link to={`/dashboard/projects/${p.id}/session`} className="text-[10px] font-black text-brand-600 px-4 py-2 rounded-xl bg-brand-50 hover:bg-brand-600 hover:text-white transition-all uppercase tracking-widest no-underline">
+                          Live Session
+                        </Link>
+                        <Link to={`/dashboard/projects/${p.id}/insights`} className="text-slate-400 hover:text-brand-600 transition-all flex items-center justify-center">
+                          <span className="material-symbols-rounded text-sm">analytics</span>
+                        </Link>
+                      </div>
                     </td>
                   </tr>
                 ))}
