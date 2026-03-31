@@ -48,31 +48,43 @@ const BiasPanel: React.FC = () => {
          {metrics.map((metric) => {
            const isApplied = appliedDetections.includes(metric.id);
            return (
-             <div key={metric.id} className={`p-4 rounded-2xl border transition-all duration-500 ${
+             <div key={metric.id} className={`p-6 rounded-[24px] border transition-all duration-500 ${
                metric.status === 'Neutral' || isApplied
-               ? 'bg-emerald-50/20 border-emerald-100/50' 
-               : 'bg-rose-50/20 border-rose-100/50 scale-[0.98]'
+               ? 'bg-emerald-50/20 border-emerald-100/30' 
+               : 'bg-rose-50/20 border-rose-100/30'
              }`}>
-               <div className="flex justify-between gap-4 mb-2">
-                 <p className={`text-sm font-bold leading-tight transition-all duration-500 ${isApplied ? 'text-emerald-700' : 'text-slate-800'}`}>
-                   {isApplied ? `Refined: "What are your first impressions of this feature?"` : metric.text}
-                 </p>
-                 <span className={`px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-widest transition-all ${
-                   metric.status === 'Neutral' || isApplied ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white'
-                 }`}>
-                   {isApplied ? 'NEUTRALISED' : metric.status}
-                 </span>
+               <div className="flex items-start justify-between gap-6">
+                 <div className="flex-1 space-y-2">
+                   <div className="flex items-center gap-2">
+                     <span className={`px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-widest ${
+                       metric.status === 'Neutral' || isApplied ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white'
+                     }`}>
+                       {isApplied ? 'NEUTRALISED' : metric.status}
+                     </span>
+                     {metric.status !== 'Neutral' && !isApplied && (
+                       <span className="text-[10px] font-bold text-rose-400">High Bias Risk</span>
+                     )}
+                   </div>
+                   <p className={`text-sm font-bold leading-snug transition-all duration-500 ${isApplied ? 'text-emerald-700' : 'text-slate-800'}`}>
+                     {isApplied ? `Refined: "What are your first impressions of this feature?"` : metric.text}
+                   </p>
+                 </div>
+                 
+                 {!isApplied && metric.status !== 'Neutral' && (
+                   <button 
+                    onClick={() => handleApply(metric.id)}
+                    className="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-white rounded-xl border border-rose-100 hover:border-brand-500 hover:text-brand-600 hover:shadow-lg hover:shadow-brand-500/10 transition-all text-[10px] font-black uppercase tracking-widest text-rose-500 group/btn"
+                   >
+                     <span className="material-symbols-rounded text-sm group-hover/btn:rotate-12 transition-transform">magic_button</span>
+                     Apply
+                   </button>
+                 )}
+                 {(isApplied || metric.status === 'Neutral') && (
+                    <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
+                      <span className="material-symbols-rounded text-xl">check_circle</span>
+                    </div>
+                 )}
                </div>
-               
-               {metric.status !== 'Neutral' && !isApplied && (
-                 <button 
-                  onClick={() => handleApply(metric.id)}
-                  className="w-full flex items-center justify-center gap-2 mt-3 p-2 bg-white rounded-lg border border-rose-100 hover:border-brand-300 hover:text-brand-600 transition-all text-[10px] font-black uppercase tracking-widest text-rose-500 group/btn"
-                 >
-                   <span className="material-symbols-rounded text-base group-hover/btn:rotate-180 transition-transform duration-500">magic_button</span>
-                   Apply Auto-Correct
-                 </button>
-               )}
              </div>
            );
          })}
